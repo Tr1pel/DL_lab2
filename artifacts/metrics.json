@@ -1,0 +1,151 @@
+{
+  "track": "nlp",
+  "model": "google/bert_uncased_L-2_H-128_A-2",
+  "revision": "30b0a37ccaaa32f332884b96992754e246e48c5f",
+  "dataset": "leondz/wnut_17",
+  "classes": [
+    "corporation",
+    "creative-work",
+    "group",
+    "location",
+    "person",
+    "product"
+  ],
+  "n_train": 3394,
+  "n_val": 1009,
+  "n_test": 1287,
+  "params_total": 4371085,
+  "baseline": {
+    "majority": {
+      "f1_micro": 0.09641025641025643,
+      "f1_macro": 0.044479780407126045,
+      "precision": 0.3381294964028777,
+      "recall": 0.056220095693779906
+    },
+    "random_head": {
+      "f1_micro": 0.02070879590093937,
+      "f1_macro": 0.009880836231379628,
+      "precision": 0.01136896390060947,
+      "recall": 0.11602870813397129
+    }
+  },
+  "validation": {
+    "f1_micro": 0.23475887170154686,
+    "f1_macro": 0.05882352941176471,
+    "precision": 0.49049429657794674,
+    "recall": 0.15430622009569378,
+    "token_f1": 0.21678783873099802,
+    "per_type": {
+      "corporation": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 34
+      },
+      "creative-work": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 105
+      },
+      "group": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 39
+      },
+      "location": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 74
+      },
+      "person": {
+        "precision": 0.4942528735632184,
+        "recall": 0.274468085106383,
+        "f1-score": 0.35294117647058826,
+        "support": 470
+      },
+      "product": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 114
+      }
+    }
+  },
+  "final": {
+    "f1_micro": 0.1504747991234478,
+    "f1_macro": 0.05316107454957384,
+    "precision": 0.35517241379310344,
+    "recall": 0.09545875810936053,
+    "token_f1": 0.1399014778325123,
+    "per_type": {
+      "corporation": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 66
+      },
+      "creative-work": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 142
+      },
+      "group": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 165
+      },
+      "location": {
+        "precision": 0.5,
+        "recall": 0.02,
+        "f1-score": 0.038461538461538464,
+        "support": 150
+      },
+      "person": {
+        "precision": 0.352112676056338,
+        "recall": 0.2331002331002331,
+        "f1-score": 0.2805049088359046,
+        "support": 429
+      },
+      "product": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 127
+      }
+    }
+  },
+  "ablation": {
+    "setting": "freeze",
+    "full": {
+      "f1_micro": 0.23475887170154686,
+      "f1_macro": 0.05882352941176471,
+      "precision": 0.49049429657794674,
+      "recall": 0.15430622009569378,
+      "train_time_sec": 61.9558036000235,
+      "trainable_params": 4371085
+    },
+    "variant": {
+      "f1_micro": 0.0,
+      "f1_macro": 0.0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "train_time_sec": 35.992689199978486,
+      "trainable_params": 1677
+    }
+  },
+  "errors": {
+    "correct": 129,
+    "boundary": 43,
+    "type": 44,
+    "missed": 620,
+    "spurious": 20
+  },
+  "device": "cpu",
+  "train_time_sec": 61.9558036000235,
+  "fast_mode": false
+}
